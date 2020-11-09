@@ -1,12 +1,12 @@
 # bot_test_1.py
-from discord.ext import commands
-import discord
-from dotenv import load_dotenv
 import os
 
 # For read the .env file
+from dotenv import load_dotenv
 
 # For connecting to discord
+import discord
+from discord.ext import commands
 
 # Dot env read
 load_dotenv()
@@ -20,7 +20,7 @@ bot = discord.Client()
 
 @bot.event
 async def on_ready():
-    print(f'{bot.autoM} has connected to Discord!')
+    print(f'{bot.user} has connected to Discord!')
 
 # Run the bot with out secret token
 bot.run(TOKEN)
